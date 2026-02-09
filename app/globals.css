@@ -55,7 +55,7 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.399 0.100 263.21);
+  --primary: oklch(0.399 0.1 263.21);
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
@@ -120,7 +120,28 @@
   * {
     @apply border-border outline-ring/50;
   }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
   body {
     @apply bg-background text-foreground;
   }
+}
+
+h1 {
+  @apply text-4xl font-bold md:text-5xl;
+}
+
+h2 {
+  @apply text-3xl font-semibold md:text-4xl;
+}
+
+h3 {
+  @apply text-2xl font-semibold md:text-3xl;
+}
+
+h4 {
+  @apply text-xl font-semibold md:text-2xl;
 }
