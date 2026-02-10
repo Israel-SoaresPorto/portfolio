@@ -8,7 +8,9 @@ export function About() {
         {/* Título principal */}
         <h2 className="font-bold mb-8">Sobre Mim</h2>
         {/* Parágrafo introdutório */}
-        <p className="text-base md:text-lg leading-relaxed mb-12 text-foreground">
+        <p className="text-base md:text-lg leading-relaxed mb-12 text-foreground"
+          
+        >
           Lorem ipsum dolor sit amet consectetur. Leo hac nec dolor nulla
           semper. In id non fusce nullam. Pellentesque senectus habitasse
           gravida hac fermentum maecenas. Purus vein eu non fermentum nulla
