@@ -6,8 +6,8 @@ import { Button } from "@/components/ui/button";
 
 export function Hero() {
   return (
-    <section className="container" id="home">
-      <div className="flex min-h-screen flex-col-reverse items-center justify-center gap-8 md:gap-12 py-16 lg:flex-row lg:justify-between">
+    <section className="w-full max-w-7xl px-4 md:px-12 lg:px-24" id="home">
+      <div className="flex min-h-160 flex-col-reverse items-center justify-center gap-8 md:gap-12 lg:flex-row lg:justify-between">
         {/* Conteúdo à esquerda */}
         <div className="flex flex-col space-y-6 text-center lg:text-left lg:flex-1">
           <h1>
