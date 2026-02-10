@@ -10,7 +10,7 @@ export function Hero() {
       <div className="flex min-h-160 flex-col-reverse items-center justify-center gap-8 md:gap-12 lg:flex-row lg:justify-between">
         {/* Conteúdo à esquerda */}
         <div className="flex flex-col space-y-6 text-center lg:text-left lg:flex-1">
-          <h1>
+          <h1 className="text-4xl font-bold">
             Oi, eu sou <span className="text-primary">Israel Soares Porto</span>
           </h1>
 

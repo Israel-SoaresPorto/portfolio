@@ -6,46 +6,49 @@ export function About() {
     >
       <div className="max-w-7xl">
         {/* Título principal */}
-        <h2 className="font-bold mb-8">Sobre Mim</h2>
+        <h2 className="text-3xl font-bold mb-8">Sobre Mim</h2>
         {/* Parágrafo introdutório */}
-        <p className="text-base md:text-lg leading-relaxed mb-12 text-foreground"
-          
-        >
-          Lorem ipsum dolor sit amet consectetur. Leo hac nec dolor nulla
-          semper. In id non fusce nullam. Pellentesque senectus habitasse
-          gravida hac fermentum maecenas. Purus vein eu non fermentum nulla
-          vitae volutpat. Ipsum est ullamcorper amet tincidunt. Commodo varius
-          commodo consequat vulputate vitae. Eget elementum egestas tincidunt
-          nec diam auctor. Odio nec est arcu turpis lorem. Sed donec sit nec
-          turpis sed in aliquet. Leo tortor pulvinar lorem vel mus sed
-          pellentesque viverra. Aliquam donec sed dolor viverra commodo eu
-          rutrum sapien ac. Dignissim duis iaculis tempus morbi orci. Netus
-          lacinia tincidunt eu auctor. Pretium cras tortor aliquet ullamcorper
-          amet. Tristique turpis sit tempus cursus iaculis diam. Ac tortor non
-          elementum lobortis semper velit neque. Euismod tellus odio in amet sed
-          sapien. Integer tincidunt ultrices vitae pretium. Ante morbi gravida
-          imperdiet phasellus suscipit. Ut mi sed amet ac risus imperdiet nibh
-          scelerisque amet. Pellentesque sed orci eu id nulla. Venenatis arcu
-          orci sit posuere gravida. Id quisque velit euismod at pharetra rhoncus
-          urna lectus tortor. Metus parturient parturient ultrices tellus varius
-          luctus imperdiet eu.
+        <p className="text-base md:text-lg leading-relaxed mb-12 text-foreground">
+          Sou estudande de Sistemas de Informação (5° semestre). Minha base
+          sólida reside no Desenvolvimento Full-Stack, mas hoje vivo um momento
+          de expansão eespecialização profunda em Cloud Computing, traçando
+          minha transição estratégica para a cultura DevOps. Atualmente, dedico
+          minha energia ao domínio de arquiteturas AWS, buscando unir a
+          agilidade do desenvolvimento com a resiliência da infraestrutura
+          moderna.
         </p>
         {/* Grid de características */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:items-baseline">
           {/* Aprendizado Contínuo */}
           <div>
-            <h3 className="mb-4">Aprendizado Contínuo</h3>
+            <h3 className="mb-4 text-primary text-2xl font-medium">
+              Curiosidade e Aprendizado Ágil
+            </h3>
             <p className="text-base md:text-lg leading-relaxed text-foreground">
-              Lorem ipsum dolor sit amet consectetur. Non phasellus eu sed ac
-              aliquam suspendisse adipiscing. Vulputate ridiculus non sed sit.
+              Encaro cada nova tecnologia como um desafio a ser vencido. Tenho
+              uma vontade genuína de aprender novas habilidades, adaptando-me
+              rapidamente às mudanças do mercado técnico.
             </p>
           </div>
-          {/* Foco em Resolução de Problemas */}
           <div>
-            <h3 className="mb-4">Foco em Resolução de Problemas</h3>
+            <h3 className="mb-4 text-primary text-2xl font-medium">
+              Resolução de Problemas
+            </h3>
             <p className="text-base md:text-lg leading-relaxed text-foreground">
-              Lorem ipsum dolor sit amet consectetur. Non phasellus eu sed ac
-              aliquam suspendisse adipiscing. Vulputate ridiculus non sed sit.
+              Minha abordagem não é apenas &quot;fazer funcionar&quot;, mas
+              entender o porquê. Analiso problemas com rigor crítico para
+              encontrar soluções sustentáveis e eficientes, focando na causa
+              raiz.
+            </p>
+          </div>
+          <div>
+            <h3 className="mb-4 text-primary text-2xl font-medium">
+              Melhoria Contínua
+            </h3>
+            <p className="text-base md:text-lg leading-relaxed text-foreground">
+              Busco diariamente aprimorar não apenas minhas competências
+              técnicas em código e nuvem, mas também minhas habilidades
+              comportamentais, como protagonismo e comunicação clara.
             </p>
           </div>
         </div>
