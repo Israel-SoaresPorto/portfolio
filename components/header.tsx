@@ -3,9 +3,10 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Sun, Moon, Menu, X, Linkedin } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { SiGithub as Github } from "@icons-pack/react-simple-icons";
+import { cn } from "@/lib/utils";
 
 const navItems = [
   { href: "#home", label: "Home" },
@@ -17,11 +18,50 @@ const navItems = [
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const { setTheme, theme } = useTheme();
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth >= 1024);
+    };
+
+    handleResize(); // Verificar no carregamento inicial
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 border-b border-zinc-200 bg-white/80 backdrop-blur-sm dark:border-zinc-800 dark:bg-zinc-950/80">
-      <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
+    <header
+      className={cn("fixed top-0 left-0 right-0 z-50 place-items-center", [
+        isMenuOpen && !isDesktop ? "bg-background" : "",
+      ])}
+    >
+      <div
+        className={cn(
+          "w-[95%] flex h-16 items-center justify-between px-4 md:px-6",
+          isScrolled
+            ? "bg-background/70 shadow-md backdrop-blur-md rounded-b-2xl"
+            : "backdrop-blur-sm",
+          isMenuOpen && !isDesktop
+            ? "bg-background rounded-none shadow-none"
+            : "",
+        )}
+      >
         {/* Logo */}
         <Link
           href="#home"
@@ -31,59 +71,46 @@ export function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden items-center gap-2 md:flex">
+        <nav className="hidden items-center gap-8 lg:flex">
           {navItems.map((item) => (
-            <Button key={item.href} variant="ghost" size="sm" asChild>
-              <Link
-                key={item.href}
-                href={item.href}
-                className="text-sm font-medium text-zinc-700 transition-colors hover:text-zinc-900 dark:text-zinc-50 dark:hover:text-zinc-200"
-              >
-                {item.label}
-              </Link>
-            </Button>
+            <Link
+              key={item.href}
+              href={item.href}
+              className="text-sm font-medium transition-colors hover:text-primary"
+            >
+              {item.label}
+            </Link>
           ))}
         </nav>
 
         {/* Social Links & Theme Toggle */}
-        <div className="flex items-center gap-2">
-          <Button
-            variant="ghost"
-            size="icon"
-            asChild
-            className="hidden sm:inline-flex"
+        <div className="flex items-center gap-4">
+          <a
+            href="https://linkedin.com/in/israel-soares"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            className="hidden xs:inline-block hover:text-primary"
           >
-            <a
-              href="https://linkedin.com/in/israel-soares"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-            >
-              <Linkedin className="h-5 w-5" />
-            </a>
-          </Button>
+            <Linkedin className="size-4" />
+          </a>
 
-          <Button
-            variant="ghost"
-            size="icon"
-            asChild
-            className="hidden sm:inline-flex"
+          <a
+            href="https://github.com/israel-soares"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            className="hidden xs:inline-block hover:text-primary"
           >
-            <a
-              href="https://github.com/israel-soares"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub"
-            >
-              <Github className="h-5 w-5" />
-            </a>
-          </Button>
+            <Github className="size-4" />
+          </a>
 
           <Button
             variant="ghost"
             size="icon"
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
             aria-label="Toggle theme"
+            className="hover:text-primary cursor-pointer"
           >
             <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
             <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
@@ -94,7 +121,7 @@ export function Header() {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden"
+            className="lg:hidden hover:text-primary cursor-pointer"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -109,39 +136,38 @@ export function Header() {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="border-t border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950 md:hidden">
-          <nav className="container mx-auto flex flex-col gap-4 px-4 py-4">
+        <div className="w-full place-items-center border-t border-zinc-200 bg-background/80 lg:hidden">
+          <nav className="w-[95%] flex flex-col gap-4 px-4 md:px-6 py-4">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-sm font-medium text-zinc-700 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
+                className="text-sm font-medium transition-colors hover:text-primary"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.label}
               </Link>
             ))}
-            <div className="flex gap-2 pt-2 sm:hidden">
-              <Button variant="ghost" size="icon" asChild>
-                <a
-                  href="https://linkedin.com/in/israel-soares"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="LinkedIn"
-                >
-                  <Linkedin className="h-5 w-5" />
-                </a>
-              </Button>
-              <Button variant="ghost" size="icon" asChild>
-                <a
-                  href="https://github.com/israel-soares"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="GitHub"
-                >
-                  <Github className="h-5 w-5" />
-                </a>
-              </Button>
+            <div className="flex gap-4 pt-2 sm:hidden">
+              <a
+                href="https://linkedin.com/in/israel-soares"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="hover:text-primary"
+              >
+                <Linkedin className="size-4" />
+              </a>
+
+              <a
+                href="https://github.com/israel-soares"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                className="hover:text-primary"
+              >
+                <Github className="size-4" />
+              </a>
             </div>
           </nav>
         </div>

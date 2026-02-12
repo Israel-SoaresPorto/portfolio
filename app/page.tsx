@@ -3,7 +3,7 @@ import { Hero } from "@/components/sections/hero";
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center mt-16">
+    <main className="min-h-screen flex flex-col items-center justify-center">
       {/* Home Section */}
       <Hero />
 

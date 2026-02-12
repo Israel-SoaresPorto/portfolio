@@ -6,10 +6,9 @@
 
 @theme inline {
   --color-background: var(--background);
+  --color-background-gradient-middle: var(--background-gradient-middle);
+  --color-background-gradient-end: var(--background-gradient-end);
   --color-foreground: var(--foreground);
-  --color-background-secondary: var(--background-secondary);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -46,21 +45,23 @@
   --radius-2xl: calc(var(--radius) + 8px);
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
+  --breakpoint-xs: 480px;
 }
 
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
+  --background-gradient-middle: oklch(0.893 0.036 266.706);
+  --background-gradient-end: oklch(0.887 0.051 265.904);
   --foreground: oklch(0.145 0 0);
-  --background-secondary: oklch(0.988 0.006 264.53);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.399 0.1 263.21);
+  --primary: oklch(0.5431 0.1431 263.73);
   --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.382 0.213 291.63);
+  --secondary-foreground: oklch(1 0 0);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
   --accent: oklch(0.97 0 0);
@@ -86,16 +87,17 @@
 
 .dark {
   --background: oklch(0.145 0 0);
+  --background-gradient-middle: oklch(0.16 0.055 258.67);
+  --background-gradient-end: oklch(0.188 0.065 262.796);
   --foreground: oklch(0.985 0 0);
-  --background-secondary: oklch(0.234 0.006 258.36);
   --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
   --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.543 0.143 263.73);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.5431 0.1431 263.73);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.464 0.26 290.453);
+  --secondary-foreground: oklch(1 0 0);
   --muted: oklch(0.269 0 0);
   --muted-foreground: oklch(0.708 0 0);
   --accent: oklch(0.269 0 0);
@@ -123,11 +125,11 @@
   * {
     @apply border-border outline-ring/50;
   }
-  
+
   html {
     scroll-behavior: smooth;
   }
-  
+
   body {
     @apply bg-background text-foreground;
   }
