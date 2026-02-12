@@ -14,19 +14,25 @@ describe("About", () => {
     expect(description).toBeInTheDocument();
   });
 
-  it("deve renderizar as característica de 'Curiosidade e Aprendizado Ágil'", () => {
+  it("deve renderizar a foto de perfil", () => {
     render(<About />);
-    const learningCharacteristic = screen.getByRole("heading", { name: /Curiosidade e Aprendizado Ágil/i });
+    const profileImage = screen.getByRole("img", { name: /Foto de perfil de Israel Soares Porto/i });
+    expect(profileImage).toBeInTheDocument();
+  });
+
+  it("deve renderizar o card de 'Aprendizado Contínuo'", () => {
+    render(<About />);
+    const learningCharacteristic = screen.getByRole("heading", { name: /Aprendizado Contínuo/i });
     expect(learningCharacteristic).toBeInTheDocument();
   });
 
-  it("deve renderizar o texto da característica de 'Curiosidade e Aprendizado Ágil'", () => {
+  it("deve renderizar o texto da característica de 'Aprendizado Contínuo'", () => {
     render(<About />);
     const learningDescription = screen.getByText(/Encaro cada nova tecnologia como um desafio a ser vencido/i);
     expect(learningDescription).toBeInTheDocument();
   });
 
-  it("deve renderizar as característica de 'Resolução de Problemas'", () => {
+  it("deve renderizar o card de 'Resolução de Problemas'", () => {
     render(<About />);
     const problemSolvingCharacteristic = screen.getByRole("heading", { name: /Resolução de Problemas/i });
     expect(problemSolvingCharacteristic).toBeInTheDocument();

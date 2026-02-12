@@ -1,56 +1,102 @@
+import { Card, CardContent, CardDescription, CardTitle } from "../ui/card";
+import Image from "next/image";
+
 export function About() {
   return (
     <section
-      className="w-full place-items-center bg-background-secondary px-4 md:px-12 lg:px-24 py-16"
+      className="bg-linear-to-t from-background via-background-gradient-middle/25 via-50% to-background-gradient-end/20 w-full place-items-center bg-background-secondary px-6 sm:px-12 lg:px-24 py-16"
       id="sobre"
     >
-      <div className="max-w-7xl">
+      <div className="max-w-7xl flex flex-col gap-12">
         {/* Título principal */}
-        <h2 className="text-3xl font-bold mb-8">Sobre Mim</h2>
-        {/* Parágrafo introdutório */}
-        <p className="text-base md:text-lg leading-relaxed mb-12 text-foreground">
-          Sou estudande de Sistemas de Informação (5° semestre). Minha base
-          sólida reside no Desenvolvimento Full-Stack, mas hoje vivo um momento
-          de expansão eespecialização profunda em Cloud Computing, traçando
-          minha transição estratégica para a cultura DevOps. Atualmente, dedico
-          minha energia ao domínio de arquiteturas AWS, buscando unir a
-          agilidade do desenvolvimento com a resiliência da infraestrutura
-          moderna.
-        </p>
+        <h2 className="text-3xl font-bold text-primary text-center">
+          Sobre Mim
+        </h2>
+        {/* Container principal com foto e introdução */}
+        <div className="flex flex-col items-center gap-8 md:flex-row md:items-start">
+          {/* Foto de perfil */}
+          <Image
+            src="/images/profile.jpg"
+            alt="Foto de perfil de Israel Soares Porto"
+            width={240}
+            height={240}
+            className="object-cover rounded-sm"
+          />
+          {/* Parágrafo introdutório */}
+          <div className="space-y-1">
+            <p className="text-base leading-relaxed text-zinc-700 dark:text-zinc-300">
+              Sou estudande de Sistemas de Informação (5° semestre). Minha base
+              sólida reside no Desenvolvimento Full-Stack, trabanhando com
+              tecnologias como TypeScript, React, Nest.JS, e Postgresql. Também
+              venho dedicando tempo para aprender sobre automações,
+              especialmente utilizando n8n para uso pessoal.
+            </p>
+            <p className="text-base leading-relaxed text-zinc-700 dark:text-zinc-300">
+              Hoje vivo um momento minha transição estratégica para a cultura
+              DevOps. Atualmente, dedico minha energia ao domínio de
+              arquiteturas AWS, buscando unir a agilidade do desenvolvimento com
+              a resiliência da infraestrutura moderna. Minha jornada é guiada
+              por uma paixão por aprender e evoluir constantemente, buscando não
+              apenas acompanhar as tendências, mas também antecipá-las.
+            </p>
+            <p className="text-base leading-relaxed text-zinc-700 dark:text-zinc-300">
+              Acredito que a combinação de habilidades técnicas e uma
+              mentalidade de melhoria contínua é a chave para criar soluções
+              inovadoras e impactantes.
+            </p>
+          </div>
+        </div>
         {/* Grid de características */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:items-baseline">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Aprendizado Contínuo */}
-          <div>
-            <h3 className="mb-4 text-primary text-2xl font-medium">
-              Curiosidade e Aprendizado Ágil
-            </h3>
-            <p className="text-base md:text-lg leading-relaxed text-foreground">
-              Encaro cada nova tecnologia como um desafio a ser vencido. Tenho
-              uma vontade genuína de aprender novas habilidades, adaptando-me
-              rapidamente às mudanças do mercado técnico.
-            </p>
-          </div>
-          <div>
-            <h3 className="mb-4 text-primary text-2xl font-medium">
-              Resolução de Problemas
-            </h3>
-            <p className="text-base md:text-lg leading-relaxed text-foreground">
-              Minha abordagem não é apenas &quot;fazer funcionar&quot;, mas
-              entender o porquê. Analiso problemas com rigor crítico para
-              encontrar soluções sustentáveis e eficientes, focando na causa
-              raiz.
-            </p>
-          </div>
-          <div>
-            <h3 className="mb-4 text-primary text-2xl font-medium">
-              Melhoria Contínua
-            </h3>
-            <p className="text-base md:text-lg leading-relaxed text-foreground">
-              Busco diariamente aprimorar não apenas minhas competências
-              técnicas em código e nuvem, mas também minhas habilidades
-              comportamentais, como protagonismo e comunicação clara.
-            </p>
-          </div>
+          <Card
+            role="article"
+            className="bg-background/30 backdrop-blur-lg hover:shadow-sm transition-shadow duration-300 hover:shadow-primary/50"
+          >
+            <CardContent>
+              <CardTitle className="text-xl text-primary mb-4">
+                <h3>Aprendizado Contínuo</h3>
+              </CardTitle>
+              <CardDescription>
+                Encaro cada nova tecnologia como um desafio a ser vencido. Tenho
+                uma vontade genuína de aprender novas habilidades, adaptando-me
+                rapidamente às mudanças do mercado técnico.
+              </CardDescription>
+            </CardContent>
+          </Card>
+          {/* Resolução de Problemas */}
+          <Card
+            role="article"
+            className="bg-background/30 backdrop-blur-lg hover:shadow-sm transition-shadow duration-300 hover:shadow-primary/50"
+          >
+            <CardContent>
+              <CardTitle className="text-xl text-primary mb-4">
+                <h3>Resolução de Problemas</h3>
+              </CardTitle>
+              <CardDescription>
+                Minha abordagem não é apenas &quot;fazer funcionar&quot;, mas
+                entender o porquê. Analiso problemas com rigor crítico para
+                encontrar soluções sustentáveis e eficientes, focando na causa
+                raiz.
+              </CardDescription>
+            </CardContent>
+          </Card>
+          {/* Melhoria Contínua */}
+          <Card
+            role="article"
+            className="bg-background/30 backdrop-blur-lg hover:shadow-sm transition-shadow duration-300 hover:shadow-primary/50"
+          >
+            <CardContent>
+              <CardTitle className="text-xl text-primary mb-4">
+                <h3>Melhoria Contínua</h3>
+              </CardTitle>
+              <CardDescription>
+                Busco diariamente aprimorar não apenas minhas competências
+                técnicas em código e nuvem, mas também minhas habilidades
+                comportamentais, como protagonismo e comunicação clara.
+              </CardDescription>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>
