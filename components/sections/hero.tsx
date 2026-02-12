@@ -2,25 +2,32 @@
 
 import { ArrowRight, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
-// import Image from 'next/image'
+import { Badge } from "../ui/badge";
 
 export function Hero() {
   return (
-    <section className="w-full max-w-7xl px-4 md:px-12 lg:px-24" id="home">
-      <div className="flex min-h-160 flex-col-reverse items-center justify-center gap-8 md:gap-12 lg:flex-row lg:justify-between">
-        {/* Conteúdo à esquerda */}
-        <div className="flex flex-col space-y-6 text-center lg:text-left lg:flex-1">
-          <h1 className="text-4xl font-bold">
-            Oi, eu sou <span className="text-primary">Israel Soares Porto</span>
+    <section
+      className="w-full min-h-screen bg-linear-to-b from-background via-background-gradient-middle/25 via-50% to-background-gradient-end/20 pt-32 py-16 px-6 sm:px-12 lg:px-24 place-items-center place-content-center"
+      id="home"
+    >
+      <div className="max-w-7xl gap-8 flex flex-col justify-center items-center">
+        <Badge className="font-medium">Disponivel para oportunidades</Badge>
+        {/* Textos e Botões */}
+        <div className="flex flex-col gap-6 text-center">
+          <p className="text-lg text-zinc-700 dark:text-zinc-300">
+            Olá, eu sou
+          </p>
+          <h1 className="text-4xl font-bold text-primary">
+            Israel Soares Porto
           </h1>
 
-          <p className="text-xl font-medium text-primary md:text-2xl">
-            Desenvolvedor Full-Stack, focado em criar sistemas escaláveis,
-            seguros e eficientes.
+          <p className="text-lg font-medium text-zinc-700 dark:text-zinc-300">
+            Desenvolvedor Full-Stack, focado em criar sistemas escaláveis, e
+            eficientes.
           </p>
 
-          {/* Botões */}
-          <div className="flex gap-4 sm:flex-row sm:gap-6 justify-center lg:justify-start">
+          {/* CTAs */}
+          <div className="flex flex-col gap-4 xs:flex-row xs:gap-6 justify-center">
             <Button
               size="lg"
               onClick={() => {
@@ -33,25 +40,18 @@ export function Hero() {
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
 
-            <Button size="lg" variant="outline" className="font-medium" asChild>
+            <Button
+              size="lg"
+              variant="outline"
+              className="font-medium text-primary border-primary hover:bg-primary hover:text-background bg-transparent dark:hover:bg-primary dark:hover:text-primary-foreground dark:border-primary"
+              asChild
+            >
               <a href="/cv.pdf" download>
                 Baixar CV
                 <Download className="ml-2 h-5 w-5" />
               </a>
             </Button>
           </div>
-        </div>
-
-        {/* Imagem/Avatar à direita */}
-        <div className="relative h-64 w-64 rounded-3xl bg-zinc-200 dark:bg-zinc-800 md:h-80 md:w-80 lg:h-96 lg:w-96">
-          {/* Placeholder para imagem - substitua com sua foto */}
-          {/* <Image 
-              src="/profile.jpg" 
-              alt="Israel Soares Porto"
-              fill
-              className="rounded-3xl object-cover"
-              priority
-            /> */}
         </div>
       </div>
     </section>

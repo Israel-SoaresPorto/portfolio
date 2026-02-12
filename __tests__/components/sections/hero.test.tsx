@@ -8,22 +8,22 @@ describe("Hero", () => {
     expect(title).toBeInTheDocument();
   });
 
-  it("deve renderizar a apresentação no titulo", () => {
+  it("deve renderizar o nome no titulo", () => {
     render(<Hero />);
     const nameElement = screen.getByRole("heading");
     expect(nameElement).toHaveTextContent("Israel Soares Porto");
   });
 
-  it("deve renderizar o subtitulo", () => {
+  it("deve renderizar o badge", () => {
     render(<Hero />);
-    const subtitle = screen.getByRole("paragraph");
-    expect(subtitle).toBeInTheDocument();
+    const badge = screen.getByText(/Disponivel para oportunidades/i);
+    expect(badge).toBeInTheDocument();
   });
 
-  it("deve exibir o texto correto no subtitulo", () => {
+  it("deve renderizar o subtitulo", () => {
     render(<Hero />);
-    const subtitle = screen.getByRole("paragraph");
-    expect(subtitle).toHaveTextContent("Desenvolvedor Full-Stack, focado em criar sistemas escaláveis, seguros e eficientes."); 
+    const subtitle = screen.getByText(/Desenvolvedor Full-Stack/i);
+    expect(subtitle).toBeInTheDocument();
   });
 
   it("deve renderizar o botão de ver projetos", () => {
