@@ -1,5 +1,6 @@
 import { About } from "@/components/sections/about";
 import { Hero } from "@/components/sections/hero";
+import { Skills } from "@/components/sections/skills";
 
 export default function Home() {
   return (
@@ -11,17 +12,7 @@ export default function Home() {
       <About />
 
       {/* Habilidades Section */}
-      <section
-        id="habilidades"
-        className="min-h-screen py-20 flex flex-col justify-center"
-      >
-        <h2 className="text-3xl font-bold text-zinc-900 dark:text-zinc-50 mb-8 text-center">
-          Minhas Habilidades
-        </h2>
-        <div className="text-center text-zinc-600 dark:text-zinc-400">
-          <p>Em breve: Lista de tecnologias e ferramentas que domino.</p>
-        </div>
-      </section>
+      <Skills />
 
       {/* Projetos Section */}
       <section
