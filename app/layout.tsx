@@ -3,6 +3,7 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/header";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Footer } from "@/components/footer";
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -20,9 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" suppressHydrationWarning>
-      <body
-        className={`${jakarta.className} antialiased`}
-      >
+      <body className={`${jakarta.className} antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -31,6 +30,7 @@ export default function RootLayout({
         >
           <Header />
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

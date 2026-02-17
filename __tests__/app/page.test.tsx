@@ -11,7 +11,7 @@ describe("Home", () => {
 
   it("deve renderizar a seção Hero", () => {
     render(<Home />);
-    const heroSection = screen.getByText(/Oi, eu sou/i);
+    const heroSection = screen.getByText(/Olá, eu sou/i);
     expect(heroSection).toBeInTheDocument();
   });
 
@@ -29,7 +29,10 @@ describe("Home", () => {
 
   it("deve renderizar a seção Projetos", () => {
     render(<Home />);
-    const projetosSection = screen.getByText(/Meus Projetos/i);
+    const projetosSection = screen.getByRole("heading", {
+      name: /Projetos/i,
+    });
+
     expect(projetosSection).toBeInTheDocument();
   });
 
