@@ -1,0 +1,71 @@
+[
+  {
+    "id": "1",
+    "name": "Nome do Projeto",
+    "description": "Lorem ipsum dolor sit amet consectetur. Lectus sodales lorem id diam. Curabitur id leo orci neque vestibulum felis bibendum non euismod. In amet viverra in vitae orci rhoncus. Magna lectus amet nibh lobortis at. Id diam turpis ipsum urna tellus diam. Blandit magnis ac lectus faucibus. Tincidunt donec nunc ullamcorper semper sed vel posuere. Aliquet placerat faucibus mauris semper tellus enim. Sed consectetur dictum egestas nibh. Convallis elit at ut cras eget vulputate fringilla iaculis commodo. Facilisi habitant eget ultricies malesuada metus diam adipiscing. Mi ullamcorper donec eu placerat. Est consequat dignissim vestibulum arcu vulputate. Etiam porta augue etiam rutrum arcu sed.",
+    "category": "fullstack",
+    "highlight": true,
+    "technologies": [
+      "React",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js",
+      "Postgresql"
+    ],
+    "highlights": [
+      {
+        "text": "Lorem ipsum dolor sit amet consectetur. Sed at ut volutpat ut in nulla lorem. Massa faucibus nunc tortor pulvinar."
+      },
+      {
+        "text": "Lorem ipsum dolor sit amet consectetur. Sed at ut volutpat ut in nulla lorem. Massa faucibus nunc tortor pulvinar."
+      },
+      {
+        "text": "Lorem ipsum dolor sit amet consectetur. Sed at ut volutpat ut in nulla lorem. Massa faucibus nunc tortor pulvinar."
+      }
+    ],
+    "githubUrl": "https://github.com",
+    "demoUrl": "https://demo.com"
+  },
+  {
+    "id": "2",
+    "name": "Nome do Projeto",
+    "highlight": true,
+    "description": "Lorem ipsum dolor sit amet consectetur. Lectus sodales lorem id diam. Curabitur id leo orci neque vestibulum felis bibendum non euismod. In amet viverra in vitae orci rhoncus. Magna lectus amet nibh lobortis at. Id diam turpis ipsum urna tellus diam. Blandit magnis ac lectus faucibus. Tincidunt donec nunc ullamcorper semper sed vel posuere. Aliquet placerat faucibus mauris semper tellus enim. Sed consectetur dictum egestas nibh. Convallis elit at ut cras eget vulputate fringilla iaculis commodo. Facilisi habitant eget ultricies malesuada metus diam adipiscing. Mi ullamcorper donec eu placerat. Est consequat dignissim vestibulum arcu vulputate. Etiam porta augue etiam rutrum arcu sed.",
+    "category": "infra",
+    "technologies": ["AWS", "EC2", "Linux"],
+    "highlights": [
+      {
+        "text": "Lorem ipsum dolor sit amet consectetur. Sed at ut volutpat ut in nulla lorem. Massa faucibus nunc tortor pulvinar."
+      },
+      {
+        "text": "Lorem ipsum dolor sit amet consectetur. Sed at ut volutpat ut in nulla lorem. Massa faucibus nunc tortor pulvinar."
+      },
+      {
+        "text": "Lorem ipsum dolor sit amet consectetur. Sed at ut volutpat ut in nulla lorem. Massa faucibus nunc tortor pulvinar."
+      }
+    ],
+    "githubUrl": "https://github.com",
+    "demoUrl": "https://demo.com"
+  },
+  {
+    "id": "3",
+    "name": "Nome do Projeto",
+    "highlight": false,
+    "description": "Lorem ipsum dolor sit amet consectetur. Lectus sodales lorem id diam. Curabitur id leo orci neque vestibulum felis bibendum non euismod. In amet viverra in vitae orci rhoncus. Magna lectus amet nibh lobortis at. Id diam turpis ipsum urna tellus diam. Blandit magnis ac lectus faucibus. Tincidunt donec nunc ullamcorper semper sed vel posuere. Aliquet placerat faucibus mauris semper tellus enim. Sed consectetur dictum egestas nibh. Convallis elit at ut cras eget vulputate fringilla iaculis commodo. Facilisi habitant eget ultricies malesuada metus diam adipiscing. Mi ullamcorper donec eu placerat. Est consequat dignissim vestibulum arcu vulputate. Etiam porta augue etiam rutrum arcu sed.",
+    "category": "automation",
+    "technologies": ["N8N"],
+    "highlights": [
+      {
+        "text": "Lorem ipsum dolor sit amet consectetur. Sed at ut volutpat ut in nulla lorem. Massa faucibus nunc tortor pulvinar."
+      },
+      {
+        "text": "Lorem ipsum dolor sit amet consectetur. Sed at ut volutpat ut in nulla lorem. Massa faucibus nunc tortor pulvinar."
+      },
+      {
+        "text": "Lorem ipsum dolor sit amet consectetur. Sed at ut volutpat ut in nulla lorem. Massa faucibus nunc tortor pulvinar."
+      }
+    ],
+    "githubUrl": "https://github.com",
+    "demoUrl": "https://demo.com"
+  }
+]

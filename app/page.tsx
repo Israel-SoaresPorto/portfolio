@@ -1,6 +1,7 @@
 import { About } from "@/components/sections/about";
 import { Hero } from "@/components/sections/hero";
 import { Skills } from "@/components/sections/skills";
+import { Projects } from "@/components/sections/projects";
 
 export default function Home() {
   return (
@@ -15,17 +16,7 @@ export default function Home() {
       <Skills />
 
       {/* Projetos Section */}
-      <section
-        id="projetos"
-        className="min-h-screen py-20 flex flex-col justify-center"
-      >
-        <h2 className="text-3xl font-bold text-zinc-900 dark:text-zinc-50 mb-8 text-center">
-          Meus Projetos
-        </h2>
-        <div className="text-center text-zinc-600 dark:text-zinc-400">
-          <p>Em breve: Showcase dos meus melhores trabalhos.</p>
-        </div>
-      </section>
+      <Projects />
 
       {/* Contato Section */}
       <section
