@@ -4,10 +4,10 @@ import Image from "next/image";
 export function About() {
   return (
     <section
-      className="bg-linear-to-t from-background via-background-gradient-middle/25 via-50% to-background-gradient-end/20 w-full place-items-center bg-background-secondary px-6 sm:px-12 lg:px-24 py-16"
+      className="w-full bg-secondary/10 px-6 sm:px-12 lg:px-24 py-16"
       id="sobre"
     >
-      <div className="max-w-7xl flex flex-col gap-12">
+      <div className="max-w-7xl mx-auto flex flex-col gap-12">
         {/* Título principal */}
         <h2 className="text-3xl font-bold text-primary text-center">
           Sobre Mim

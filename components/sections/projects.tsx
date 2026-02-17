@@ -45,7 +45,9 @@ function projectsReducer(
       return {
         ...state,
         activeTab: action.type,
-        projects: projects.filter((project) => project.category === action.type)
+        projects: projects.filter(
+          (project) => project.category === action.type,
+        ),
       };
     default:
       return state;
@@ -66,10 +68,10 @@ export function Projects() {
 
   return (
     <section
-      className="bg-linear-to-t flex from-background via-background-gradient-middle/25 via-50% to-background-gradient-end/20 w-full place-content-center px-6 sm:px-12 lg:px-24 py-16"
+      className="bg-primary/5 w-full px-6 sm:px-12 lg:px-24 py-16"
       id="projetos"
     >
-      <div className="max-w-7xl w-full flex flex-col gap-12">
+      <div className="max-w-7xl mx-auto flex flex-col gap-12">
         {/* Header */}
         <div className="flex flex-col gap-8 items-center">
           <div className="space-y-4">
@@ -88,14 +90,14 @@ export function Projects() {
             onValueChange={(value) =>
               dispatch({ type: value as ProjectFilter })
             }
-            className="bg-zinc-50 dark:bg-zinc-900 rounded-md p-1"
+            className="bg-background/50 rounded-md p-1"
           >
             <TabsList className="bg-transparent justify-center">
               {(Object.keys(filterLabels) as ProjectFilter[]).map((filter) => (
                 <TabsTrigger
                   key={filter}
                   value={filter}
-                  className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground dark:data-[state=active]:bg-primary dark:data-[state=active]:text-primary-foreground rounded-sm px-4 py-2 text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
+                  className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground dark:data-[state=active]:bg-primary dark:data-[state=active]:text-primary-foreground rounded-sm px-4 py-2 text-muted-foreground hover:text-primary dark:hover:text-primary transition-colors cursor-pointer"
                 >
                   {filterLabels[filter]}
                 </TabsTrigger>

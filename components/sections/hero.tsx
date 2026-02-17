@@ -7,7 +7,7 @@ import { Badge } from "../ui/badge";
 export function Hero() {
   return (
     <section
-      className="w-full min-h-screen bg-linear-to-b from-background via-background-gradient-middle/25 via-50% to-background-gradient-end/20 pt-32 py-16 px-6 sm:px-12 lg:px-24 place-items-center place-content-center"
+      className="bg-secondary/10 w-full min-h-screen pt-32 py-16 px-6 sm:px-12 lg:px-24 flex justify-center"
       id="home"
     >
       <div className="max-w-7xl gap-8 flex flex-col justify-center items-center">

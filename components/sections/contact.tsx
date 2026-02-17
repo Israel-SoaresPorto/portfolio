@@ -8,9 +8,9 @@ export function Contact() {
   return (
     <section
       id="contato"
-      className="bg-linear-to-b from-background via-background-gradient-middle/30 via-50% to-background-gradient-end/20  w-full py-20 px-6 sm:px-12 lg:px-24 flex flex-col justify-center items-center"
+      className="bg-secondary/10 w-full py-20 px-6 sm:px-12 lg:px-24"
     >
-      <div className="max-w-7xl w-full flex flex-col items-center gap-8 text-center">
+      <div className="max-w-7xl mx-auto w-full flex flex-col items-center gap-8 text-center">
         <h2 className="text-4xl font-bold text-primary">Vamos Conversar?</h2>
 
         <p className="text-lg text-zinc-600 dark:text-zinc-400 max-w-2xl">

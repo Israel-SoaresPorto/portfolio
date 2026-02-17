@@ -102,10 +102,10 @@ export function Skills() {
 
   return (
     <section
-      className="bg-linear-to-b from-background via-background-gradient-middle/25 via-50% to-background-gradient-end/20 w-full place-items-center px-6 sm:px-12 lg:px-24 py-16"
+      className="w-full bg-primary/5 px-6 sm:px-12 lg:px-24 py-16"
       id="habilidades"
     >
-      <div className="max-w-7xl flex flex-col gap-20">
+      <div className="max-w-7xl mx-auto flex flex-col gap-20">
         {/* Hard Skills */}
         <div>
           <h2 className="text-3xl font-bold text-primary text-center mb-12">
@@ -134,7 +134,7 @@ export function Skills() {
                       aria-label={skill.name}
                       variant="outline"
                       key={skill.name}
-                      className="px-4 py-2 border-primary text-zinc-700 dark:text-zinc-300 bg-background/30 text-sm font-medium flex items-center gap-2 hover:shadow-md transition-shadow duration-300 hover:shadow-primary/50"
+                      className="px-4 py-2 border-primary text-zinc-700 dark:text-zinc-300 bg-background/20 text-sm font-medium flex items-center gap-2 shadow-xs hover:shadow-xs transition-shadow duration-300 hover:shadow-primary/50"
                     >
                       {skill.icon && (
                         <skill.icon
@@ -164,7 +164,7 @@ export function Skills() {
             {softSkills.map((skill) => (
               <Card
                 key={skill.name}
-                className="p-4 bg-background/30 backdrop-blur-lg 
+                className="p-4 bg-background/20 backdrop-blur-lg 
                 hover:shadow-sm transition-shadow duration-300 hover:shadow-primary/50 flex-row items-center group"
                 aria-label={skill.name}
               >
