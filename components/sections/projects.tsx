@@ -4,9 +4,6 @@ import { useReducer } from "react";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ProjectCard } from "@/components/project-card";
 import { Project, ProjectCategory, ProjectFilter } from "@/lib/types";
-import projectsData from "@/data/projects.json";
-
-const projects = projectsData as Project[];
 
 const filterLabels: Record<ProjectFilter, string> = {
   highlight: "Destaques",
@@ -14,6 +11,10 @@ const filterLabels: Record<ProjectFilter, string> = {
   infra: "Infraestrutura",
   automation: "Automação",
 };
+
+export interface ProjectsProps {
+  projects: Project[];
+}
 
 export interface ProjectsState {
   projects: Project[];
@@ -25,41 +26,43 @@ export interface ProjectsAction {
   payload?: ProjectCategory;
 }
 
-function projectsReducer(
-  state: ProjectsState,
-  action: ProjectsAction,
-): ProjectsState {
-  switch (action.type) {
-    case "highlight":
-      return {
-        ...state,
-        activeTab: "highlight",
-        projects: projects.filter((project) => project.highlight),
-      };
-    case "fullstack":
-    case "infra":
-    case "automation":
-      return {
-        ...state,
-        activeTab: action.type,
-        projects: projects.filter(
-          (project) => project.category === action.type,
-        ),
-      };
-    default:
-      return state;
-  }
+function createProjectsReducer(allProjects: Project[]) {
+  return function projectsReducer(
+    state: ProjectsState,
+    action: ProjectsAction,
+  ): ProjectsState {
+    switch (action.type) {
+      case "highlight":
+        return {
+          ...state,
+          activeTab: "highlight",
+          projects: allProjects.filter((project) => project.highlight),
+        };
+      case "fullstack":
+      case "infra":
+      case "automation":
+        return {
+          ...state,
+          activeTab: action.type,
+          projects: allProjects.filter(
+            (project) => project.category === action.type,
+          ),
+        };
+      default:
+        return state;
+    }
+  };
 }
 
-const createInitialState = (): ProjectsState => ({
-  projects: projects.filter((project) => project.highlight),
+const createInitialState = (allProjects: Project[]): ProjectsState => ({
+  projects: allProjects.filter((project) => project.highlight),
   activeTab: "highlight",
 });
 
-export function Projects() {
+export function Projects({ projects: allProjects }: ProjectsProps) {
   const [state, dispatch] = useReducer(
-    projectsReducer,
-    projects,
+    createProjectsReducer(allProjects),
+    allProjects,
     createInitialState,
   );
 
