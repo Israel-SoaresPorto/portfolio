@@ -1,9 +1,5 @@
 export type ProjectCategory = "fullstack" | "infra" | "automation";
 
-export interface ProjectHighlight {
-  text: string;
-}
-
 export interface Project {
   id: string;
   name: string;
@@ -12,7 +8,7 @@ export interface Project {
   image?: string;
   category: ProjectCategory;
   technologies: string[];
-  highlights: ProjectHighlight[];
+  highlights: string[];
   githubUrl?: string;
   demoUrl?: string;
 }

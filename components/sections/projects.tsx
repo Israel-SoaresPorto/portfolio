@@ -6,10 +6,7 @@ import { ProjectCard } from "@/components/project-card";
 import { Project, ProjectCategory, ProjectFilter } from "@/lib/types";
 import projectsData from "@/data/projects.json";
 
-const projects: Project[] = projectsData.map((project) => ({
-  ...project,
-  category: project.category as ProjectCategory,
-}));
+const projects = projectsData as Project[];
 
 const filterLabels: Record<ProjectFilter, string> = {
   highlight: "Destaques",

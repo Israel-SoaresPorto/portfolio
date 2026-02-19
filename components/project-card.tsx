@@ -65,7 +65,7 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
           <ul className="space-y-2 list-disc marker:text-primary marker:text-xl pl-4">
             {project.highlights.map((highlight, index) => (
               <li key={index} className="text-sm text-muted-foreground">
-                {highlight.text}
+                {highlight}
               </li>
             ))}
           </ul>

@@ -20,8 +20,8 @@ describe("ProjectCard", () => {
     category: "fullstack",
     technologies: ["React", "TypeScript", "Node.js"],
     highlights: [
-      { text: "Funcionalidade destacada 1" },
-      { text: "Funcionalidade destacada 2" },
+      "Funcionalidade destacada 1",
+      "Funcionalidade destacada 2",
     ],
     githubUrl: "https://github.com/test/project",
     demoUrl: "https://demo.test.com",
@@ -165,7 +165,7 @@ describe("ProjectCard", () => {
 
     // Verifica highlights
     completeProject.highlights.forEach((highlight) => {
-      expect(screen.getByText(highlight.text)).toBeInTheDocument();
+      expect(screen.getByText(highlight)).toBeInTheDocument();
     });
 
     // Verifica tecnologias
