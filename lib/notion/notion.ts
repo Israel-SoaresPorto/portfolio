@@ -67,17 +67,13 @@ export async function getProjects(): Promise<Project[]> {
       : "";
     const highlight = props.Destaque ? extractCheckbox(props.Destaque) : false;
     const image = props.Thumbnail ? extractFileUrl(props.Thumbnail) : undefined;
-    const categoryRaw = props.Categoria
-      ? extractSelect(props.Categoria)
-      : null;
+    const categoryRaw = props.Categoria ? extractSelect(props.Categoria) : null;
     const technologies = props.Tecnologias
       ? extractMultiSelect(props.Tecnologias)
       : [];
-    const detailsText = props.Detalhes
-      ? extractRichText(props.Detalhes)
-      : "";
+    const detailsText = props.Detalhes ? extractRichText(props.Detalhes) : "";
     const highlights = parseHighlights(detailsText);
-    const githubUrl = props.GitHub ? extractUrl(props.GitHub) : undefined;
+    const githubUrl = props.Github ? extractUrl(props.Github) : undefined;
     const demoUrl = props.Demo ? extractUrl(props.Demo) : undefined;
 
     // Validação de categoria
