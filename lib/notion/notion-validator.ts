@@ -183,7 +183,7 @@ export function mapCategory(categoryLabel: string): ProjectCategory | null {
 }
 
 /**
- * Processa campo de detalhes separado por vírgula em array de highlights
+ * Processa campo de detalhes em listagem de destaques, assumindo que itens são separados por "•"
  */
 export function parseHighlights(detailsText: string): string[] {
   if (!detailsText || detailsText.trim() === "") {
@@ -191,7 +191,7 @@ export function parseHighlights(detailsText: string): string[] {
   }
 
   return detailsText
-    .split(",")
+    .split(/•/)
     .map((item) => item.trim())
     .filter((item) => item.length > 0);
 }
