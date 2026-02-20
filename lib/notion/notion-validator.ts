@@ -2,6 +2,7 @@ import type {
   PageObjectResponse,
   DataSourceObjectResponse,
 } from "@notionhq/client/build/src/api-endpoints";
+import { ProjectCategory } from "../types";
 
 type NotionProperties =
   | PageObjectResponse["properties"]
@@ -158,19 +159,15 @@ export function isValidUrl(url: string): boolean {
 /**
  * Valida se uma categoria é válida
  */
-export function isValidCategory(
-  category: string,
-): category is "fullstack" | "infra" | "automation" {
+export function isValidCategory(category: string): category is ProjectCategory {
   return ["fullstack", "infra", "automation"].includes(category);
 }
 
 /**
  * Mapeia categorias em português para códigos internos
  */
-export function mapCategory(
-  categoryLabel: string,
-): "fullstack" | "infra" | "automation" | null {
-  const categoryMap: Record<string, "fullstack" | "infra" | "automation"> = {
+export function mapCategory(categoryLabel: string): ProjectCategory | null {
+  const categoryMap: Record<string, ProjectCategory> = {
     fullstack: "fullstack",
     "Full Stack": "fullstack",
     "full stack": "fullstack",
