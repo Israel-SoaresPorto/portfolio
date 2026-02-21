@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -11,36 +13,36 @@ export function Footer() {
           </p>
 
           <div className="flex gap-6">
-            <a
+            <Link
               href="#home"
               className="text-sm text-zinc-600 dark:text-zinc-400 hover:text-primary dark:hover:text-zinc-100 transition-colors"
             >
               Início
-            </a>
-            <a
+            </Link>
+            <Link
               href="#sobre"
               className="text-sm text-zinc-600 dark:text-zinc-400 hover:text-primary dark:hover:text-zinc-100 transition-colors"
             >
               Sobre
-            </a>
-            <a
+            </Link>
+            <Link
               href="#habilidades"
               className="text-sm text-zinc-600 dark:text-zinc-400 hover:text-primary dark:hover:text-zinc-100 transition-colors"
             >
               Habilidades
-            </a>
-            <a
+            </Link>
+            <Link
               href="#projetos"
               className="text-sm text-zinc-600 dark:text-zinc-400 hover:text-primary dark:hover:text-zinc-100 transition-colors"
             >
               Projetos
-            </a>
-            <a
+            </Link>
+            <Link
               href="#contato"
               className="text-sm text-zinc-600 dark:text-zinc-400 hover:text-primary dark:hover:text-zinc-100 transition-colors"
             >
               Contato
-            </a>
+            </Link>
           </div>
         </div>
       </div>

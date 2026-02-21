@@ -86,25 +86,25 @@ export function Header() {
 
         {/* Social Links & Theme Toggle */}
         <div className="flex items-center gap-4">
-          <a
-            href="https://linkedin.com/in/israel-soares"
+          <Link
+            href="https://www.linkedin.com/in/israel-soares-porto/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
             className="hidden xs:inline-block hover:text-primary"
           >
             <Linkedin className="size-4" />
-          </a>
+          </Link>
 
-          <a
-            href="https://github.com/israel-soares"
+          <Link
+            href="https://github.com/Israel-SoaresPorto"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
             className="hidden xs:inline-block hover:text-primary"
           >
             <Github className="size-4" />
-          </a>
+          </Link>
 
           <Button
             variant="ghost"
@@ -150,25 +150,25 @@ export function Header() {
               </Link>
             ))}
             <div className="flex gap-4 pt-2 sm:hidden">
-              <a
-                href="https://linkedin.com/in/israel-soares"
+              <Link
+                href="https://www.linkedin.com/in/israel-soares-porto/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
                 className="hover:text-primary"
               >
                 <Linkedin className="size-4" />
-              </a>
+              </Link>
 
-              <a
-                href="https://github.com/israel-soares"
+              <Link
+                href="https://github.com/Israel-SoaresPorto"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
                 className="hover:text-primary"
               >
                 <Github className="size-4" />
-              </a>
+              </Link>
             </div>
           </nav>
         </div>

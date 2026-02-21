@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { Mail } from "lucide-react";
 import { SiGithub } from "@icons-pack/react-simple-icons";
 import { Button } from "@/components/ui/button";
@@ -20,32 +21,32 @@ export function Contact() {
 
         <div className="flex flex-col sm:flex-row gap-4 mt-4">
           <Button variant="default" size="lg" asChild className="gap-2">
-            <a href="mailto:seu-email@example.com">
+            <Link href="mailto:seu-email@example.com">
               <Mail className="size-5" />
               E-mail
-            </a>
+            </Link>
           </Button>
 
           <Button variant="outline" size="lg" asChild className="gap-2">
-            <a
-              href="https://www.linkedin.com/in/seu-perfil"
+            <Link
+              href="https://www.linkedin.com/in/israel-soares-porto/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <Linkedin className="size-5" />
               Linkedin
-            </a>
+            </Link>
           </Button>
 
           <Button variant="outline" size="lg" asChild className="gap-2">
-            <a
-              href="https://github.com/seu-usuario"
+            <Link
+              href="https://github.com/Israel-SoaresPorto"
               target="_blank"
               rel="noopener noreferrer"
             >
               <SiGithub className="size-5" />
               Github
-            </a>
+            </Link>
           </Button>
         </div>
       </div>
