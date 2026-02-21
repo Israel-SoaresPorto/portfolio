@@ -15,6 +15,8 @@ import {
 } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import { Project } from "@/lib/types";
+import Link from "next/link";
+
 
 interface ProjectCardProps {
   project: Project;
@@ -30,7 +32,7 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
       )}
     >
       {/* Preview Image Area */}
-      <div className="relative h-44 bg-muted">
+      <div className="relative h-60 bg-muted/20">
         {project.image ? (
           <Image
             src={project.image}
@@ -59,10 +61,10 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
         </CardDescription>
       </CardHeader>
 
-      <CardContent className="pt-4 space-y-6 flex-1">
+      <CardContent className="pt-4 space-y-6 flex-1 flex flex-col">
         {/* Highlights */}
         {project.highlights.length > 0 && (
-          <ul className="space-y-2 list-disc marker:text-primary marker:text-xl pl-4">
+          <ul className="list-disc marker:text-primary marker:text-sm pl-4 flex-1">
             {project.highlights.map((highlight, index) => (
               <li key={index} className="text-sm text-muted-foreground">
                 {highlight}
@@ -85,22 +87,26 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
       <CardFooter className="gap-3 pt-2 pb-6">
         {project.githubUrl && (
           <Button variant="outline" className="flex-1" asChild>
-            <a
+            <Link
               href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
             >
               <Github className="h-4 w-4" />
               Github
-            </a>
+            </Link>
           </Button>
         )}
         {project.demoUrl && (
           <Button variant="outline" className="flex-1" asChild>
-            <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
+            <Link
+              href={project.demoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Demo
-              <ExternalLink className="h-4 w-4" />
-            </a>
+              <ExternalLink className="h-4 w-4 ml-2" />
+            </Link>
           </Button>
         )}
       </CardFooter>
