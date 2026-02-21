@@ -115,9 +115,9 @@ export function Projects({ projects: allProjects }: ProjectsProps) {
 
         {/* Empty State */}
         {state.projects.length === 0 && (
-          <div className="text-center py-12">
-            <p className="text-muted-foreground">
-              Nenhum projeto encontrado para este filtro.
+          <div className="text-center py-12 h-80 flex items-center">
+            <p className="text-muted-foreground flex-1">
+              Nenhum projeto encontrado.
             </p>
           </div>
         )}
