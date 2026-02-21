@@ -2,11 +2,12 @@
 
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Sun, Moon, Menu, X, Linkedin } from "lucide-react";
+import { Sun, Moon, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { SiGithub as Github } from "@icons-pack/react-simple-icons";
 import { cn } from "@/lib/utils";
+import Linkedin from "./icons/linkedin";
 
 const navItems = [
   { href: "#home", label: "Home" },

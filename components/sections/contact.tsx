@@ -1,8 +1,9 @@
 "use client";
 
-import { Mail, Linkedin } from "lucide-react";
+import { Mail } from "lucide-react";
 import { SiGithub } from "@icons-pack/react-simple-icons";
 import { Button } from "@/components/ui/button";
+import Linkedin from "@/components/icons/linkedin";
 
 export function Contact() {
   return (
