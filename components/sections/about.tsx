@@ -26,7 +26,7 @@ export function About() {
           <div className="space-y-1">
             <p className="text-base leading-relaxed text-zinc-700 dark:text-zinc-300">
               Sou estudande de Sistemas de Informação (5° semestre). Minha base
-              sólida reside no Desenvolvimento Full-Stack, trabanhando com
+              sólida reside no Desenvolvimento Full-Stack, trabalhando com
               tecnologias como TypeScript, React, Nest.JS, e Postgresql. Também
               venho dedicando tempo para aprender sobre automações,
               especialmente utilizando n8n para uso pessoal.

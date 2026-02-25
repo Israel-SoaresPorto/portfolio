@@ -21,7 +21,7 @@ export function Contact() {
 
         <div className="flex flex-col sm:flex-row gap-4 mt-4">
           <Button variant="default" size="lg" asChild className="gap-2">
-            <Link href="mailto:seu-email@example.com">
+            <Link href="mailto:soaresportoisrael@gmail.com">
               <Mail className="size-5" />
               E-mail
             </Link>
