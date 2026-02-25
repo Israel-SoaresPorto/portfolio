@@ -37,7 +37,7 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
           <Image
             src={project.image}
             alt={`Preview do projeto ${project.name}`}
-            fill
+            fill={true}
             className="object-cover"
           />
         ) : (

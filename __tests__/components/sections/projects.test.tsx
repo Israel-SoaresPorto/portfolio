@@ -178,7 +178,7 @@ describe("Projects", () => {
     render(<Projects projects={[]} />);
 
     const emptyMessage = screen.getByText(
-      /nenhum projeto encontrado para este filtro/i,
+      /nenhum projeto encontrado./i,
     );
     expect(emptyMessage).toBeInTheDocument();
   });

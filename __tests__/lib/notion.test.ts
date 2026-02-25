@@ -115,9 +115,9 @@ describe("notion integration", () => {
             },
             Detalhes: {
               type: "rich_text" as const,
-              rich_text: [{ plain_text: "Feature 1, Feature 2, Feature 3" }] as any,
+              rich_text: [{ plain_text: "•Feature 1\n•Feature 2\n•Feature 3" }] as any,
             },
-            GitHub: {
+            Github: {
               type: "url" as const,
               url: "https://github.com/test/repo",
             },
@@ -235,7 +235,7 @@ describe("notion integration", () => {
             Categoria: { type: "select" as const, select: { name: "fullstack" } as any },
             Tecnologias: { type: "multi_select" as const, multi_select: [] as any },
             Detalhes: { type: "rich_text" as const, rich_text: [] as any },
-            GitHub: { type: "url" as const, url: "invalid-url" },
+            Github: { type: "url" as const, url: "invalid-url" },
             Demo: { type: "url" as const, url: "not-a-url" },
           },
         },

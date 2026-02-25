@@ -29,7 +29,7 @@ describe("Contact", () => {
     expect(linkedinButton).toBeInTheDocument();
     expect(linkedinButton).toHaveAttribute(
       "href",
-      "https://www.linkedin.com/in/seu-perfil",
+      "https://www.linkedin.com/in/israel-soares-porto/",
     );
     expect(linkedinButton).toHaveAttribute("target", "_blank");
     expect(linkedinButton).toHaveAttribute("rel", "noopener noreferrer");
@@ -41,7 +41,7 @@ describe("Contact", () => {
     expect(githubButton).toBeInTheDocument();
     expect(githubButton).toHaveAttribute(
       "href",
-      "https://github.com/seu-usuario",
+      "https://github.com/Israel-SoaresPorto",
     );
     expect(githubButton).toHaveAttribute("target", "_blank");
     expect(githubButton).toHaveAttribute("rel", "noopener noreferrer");

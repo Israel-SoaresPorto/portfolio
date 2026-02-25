@@ -259,17 +259,17 @@ describe("notion-validator", () => {
 
   describe("parseHighlights", () => {
     it("deve separar texto por vírgulas", () => {
-      const text = "Item 1, Item 2, Item 3";
+      const text = "•Item 1\n•Item 2\n•Item 3";
       expect(parseHighlights(text)).toEqual(["Item 1", "Item 2", "Item 3"]);
     });
 
     it("deve remover espaços em branco extras", () => {
-      const text = "  Item 1  ,  Item 2  ,  Item 3  ";
+      const text = "•Item 1\n•Item 2\n•Item 3";
       expect(parseHighlights(text)).toEqual(["Item 1", "Item 2", "Item 3"]);
     });
 
     it("deve filtrar itens vazios", () => {
-      const text = "Item 1,, Item 2,  , Item 3";
+      const text = "•Item 1\n•\n•Item 2\n•\n•Item 3";
       expect(parseHighlights(text)).toEqual(["Item 1", "Item 2", "Item 3"]);
     });
 
