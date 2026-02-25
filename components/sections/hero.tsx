@@ -46,7 +46,7 @@ export function Hero() {
               className="font-medium text-primary border-primary hover:bg-primary hover:text-background bg-transparent dark:hover:bg-primary dark:hover:text-primary-foreground dark:border-primary"
               asChild
             >
-              <a href="/cv.pdf" download>
+              <a href="/curriculo.pdf" download>
                 Baixar CV
                 <Download className="ml-2 h-5 w-5" />
               </a>
