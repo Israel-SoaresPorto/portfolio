@@ -92,7 +92,7 @@ export function Projects({ projects: allProjects }: ProjectsProps) {
             }
             className="bg-background/50 rounded-md p-1"
           >
-            <TabsList className="bg-transparent justify-center">
+            <TabsList className="bg-transparent justify-center data-[orientation='horizontal']:h-fit flex-wrap gap-2">
               {(Object.keys(filterLabels) as ProjectFilter[]).map((filter) => (
                 <TabsTrigger
                   key={filter}
@@ -107,7 +107,7 @@ export function Projects({ projects: allProjects }: ProjectsProps) {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
           {state.projects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}

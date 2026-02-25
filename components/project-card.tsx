@@ -17,7 +17,6 @@ import { cn } from "@/lib/utils";
 import { Project } from "@/lib/types";
 import Link from "next/link";
 
-
 interface ProjectCardProps {
   project: Project;
   className?: string;
@@ -38,7 +37,7 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
             src={project.image}
             alt={`Preview do projeto ${project.name}`}
             fill={true}
-            className="object-cover"
+            sizes="( max-width: 768px ) 100vw, ( max-width: 1200px ) 50vw, 33vw"
           />
         ) : (
           <div className="flex items-center justify-center h-full text-muted-foreground"></div>
