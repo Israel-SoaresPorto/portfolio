@@ -9,9 +9,20 @@ const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
 });
 
+const baseUrl = process.env.VERCEL_URL
+  ? `https://${process.env.VERCEL_URL}`
+  : "http://localhost:3000";
+
 export const metadata: Metadata = {
-  title: "Israel Soares - Portfolio",
-  description: "Portfolio pessoal de Israel Soares",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || baseUrl),
+  title: "Israel Soares | Portfolio",
+  description: "Portfolio de Israel Soares Porto, desenvolvedor full-stack",
+  openGraph: {
+    url: process.env.NEXT_PUBLIC_SITE_URL || baseUrl,
+    title: "Israel Soares | Portfolio",
+    description: "Portfolio de Israel Soares Porto, desenvolvedor full-stack",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
