@@ -66,17 +66,20 @@ export function Projects({ projects: allProjects }: ProjectsProps) {
 
   return (
     <section
-      className="bg-primary/5 w-full px-6 sm:px-12 lg:px-24 py-16"
+      className="bg-slate-50 dark:bg-zinc-950 w-full px-6 sm:px-12 lg:px-24 py-16"
       id="projetos"
     >
       <div className="max-w-7xl mx-auto flex flex-col gap-12">
         {/* Header */}
-        <div className="flex flex-col gap-8 items-center">
-          <div className="space-y-4">
-            <h2 className="text-3xl sm:text-4xl font-bold text-primary text-center">
+        <div className="flex flex-col gap-8">
+          <div className="space-y-2">
+            <p className="text-primary font-medium uppercase tracking-wide">
+              Portfólio
+            </p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-zinc-900 dark:text-zinc-100">
               Projetos
             </h2>
-            <p className="text-muted-foreground text-center">
+            <p className="text-muted-foreground">
               Uma seleção de soluções que desenvolvi unindo infraestrutura em
               nuvem e desenvolvimento de aplicações.
             </p>
@@ -88,9 +91,9 @@ export function Projects({ projects: allProjects }: ProjectsProps) {
             onValueChange={(value) =>
               dispatch({ type: value as ProjectFilter })
             }
-            className="bg-transparent rounded-none w-full p-2 border-b border-muted-foreground/50"
+            className="bg-transparent rounded-none w-full p-2 border-b border-muted-foreground/10"
           >
-            <TabsList className="bg-transparent mx-auto justify-center flex-wrap gap-2 data-[orientation='horizontal']:h-fit">
+            <TabsList className="bg-transparent flex-wrap gap-2 data-[orientation='horizontal']:h-fit">
               {(Object.keys(filterLabels) as ProjectFilter[]).map((filter) => (
                 <TabsTrigger
                   key={filter}

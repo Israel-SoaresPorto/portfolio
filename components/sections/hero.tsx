@@ -2,18 +2,17 @@
 
 import { ArrowRight, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Badge } from "../ui/badge";
 
 export function Hero() {
   return (
     <section
-      className="bg-secondary/10 w-full min-h-screen pt-32 py-16 px-6 sm:px-12 lg:px-24 flex justify-center"
+      className="bg-slate-50 dark:bg-zinc-950 w-full min-h-screen pt-32 py-16 px-6 sm:px-12 lg:px-24 flex justify-center"
       id="home"
     >
       <div className="max-w-7xl gap-8 flex flex-col justify-center items-center">
-        <Badge className="font-medium sm:text-sm">
+        <p className="font-medium sm:text-sm uppercase tracking-wide text-primary">
           Disponivel para oportunidades
-        </Badge>
+        </p>
         {/* Textos e Botões */}
         <div className="flex flex-col gap-6 text-center">
           <p className="text-lg text-zinc-700 dark:text-zinc-300">

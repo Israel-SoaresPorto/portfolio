@@ -26,16 +26,21 @@ const qualities = [
 export function About() {
   return (
     <section
-      className="w-full bg-secondary/10 px-6 sm:px-12 lg:px-24 py-16"
+      className="w-full bg-slate-50 dark:bg-zinc-950 px-6 sm:px-12 lg:px-24 py-16"
       id="sobre"
     >
       <div className="max-w-7xl mx-auto flex flex-col gap-12">
         {/* Título principal */}
-        <h2 className="text-3xl sm:text-4xl font-bold text-primary text-center">
-          Sobre Mim
-        </h2>
+        <div className="space-y-3">
+          <p className="text-primary font-medium uppercase tracking-wide">
+            Sobre
+          </p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-zinc-900 dark:text-zinc-100">
+            Sobre Mim
+          </h2>
+        </div>
         {/* Container principal com foto e introdução */}
-        <div className="flex flex-col items-center gap-8 md:flex-row md:items-start">
+        <div className="flex flex-col items-center gap-12 lg:gap-16 md:flex-row md:items-start">
           {/* Foto de perfil */}
           <Image
             src="/images/profile.jpg"
@@ -47,13 +52,22 @@ export function About() {
           {/* Parágrafo introdutório */}
           <div className="space-y-1">
             <p className="text-base leading-relaxed text-zinc-700 dark:text-zinc-300">
-              Sou estudante do 5º semestre de Sistemas de Informação com forte base em Desenvolvimento Full-Stack, construindo aplicações robustas com TypeScript, React, Nest.js e PostgreSQL.
+              Sou estudante do 5º semestre de Sistemas de Informação com forte
+              base em Desenvolvimento Full-Stack, construindo aplicações
+              robustas com TypeScript, React, Nest.js e PostgreSQL.
             </p>
             <p className="text-base leading-relaxed text-zinc-700 dark:text-zinc-300">
-              Atualmente, estou focado em minha transição para a área de Cloud e DevOps. Dedico meus estudos diários ao domínio de ambientes Linux e arquiteturas AWS. Meu principal objetivo é unir a agilidade da criação de software com a resiliência, automação e escalabilidade da infraestrutura moderna.
+              Atualmente, estou focado em minha transição para a área de Cloud e
+              DevOps. Dedico meus estudos diários ao domínio de ambientes Linux
+              e arquiteturas AWS. Meu principal objetivo é unir a agilidade da
+              criação de software com a resiliência, automação e escalabilidade
+              da infraestrutura moderna.
             </p>
             <p className="text-base leading-relaxed text-zinc-700 dark:text-zinc-300">
-              Mais do que acompanhar tendências, busco entender o &quot;porquê&quot; por trás de cada ferramenta, aplicando uma mentalidade de melhoria contínua para desenvolver sistemas que realmente façam a diferença.
+              Mais do que acompanhar tendências, busco entender o
+              &quot;porquê&quot; por trás de cada ferramenta, aplicando uma
+              mentalidade de melhoria contínua para desenvolver sistemas que
+              realmente façam a diferença.
             </p>
           </div>
         </div>
@@ -63,16 +77,18 @@ export function About() {
             <Card
               key={index}
               role="article"
-              className="hover:shadow-sm transition-shadow duration-300 hover:shadow-primary/50"
+              className="shadow-sm border-0"
             >
               <CardContent>
                 <div className="inline-block bg-primary/10 dark:bg-primary/20 p-2 rounded-md mb-2">
                   <quality.icon className="size-6 text-primary" />
                 </div>
-                <CardTitle className="text-xl text-primary mb-4">
+                <CardTitle className="text-xl text-zinc-900 dark:text-zinc-100 mb-4">
                   <h3>{quality.name}</h3>
                 </CardTitle>
-                <CardDescription>{quality.description}</CardDescription>
+                <CardDescription className="text-zinc-700 dark:text-zinc-300">
+                  {quality.description}
+                </CardDescription>
               </CardContent>
             </Card>
           ))}

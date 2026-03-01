@@ -43,7 +43,7 @@ export function Header() {
         className={cn(
           "flex h-16 items-center justify-between px-4 md:px-6 mx-auto",
           isScrolled
-            ? "bg-background/90 shadow-md backdrop-blur-md"
+            ? "bg-background/70 shadow-md backdrop-blur-md"
             : "backdrop-blur-sm",
         )}
       >

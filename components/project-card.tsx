@@ -26,7 +26,7 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
   return (
     <Card
       className={cn(
-        "bg-background backdrop-blur-lg hover:shadow-md transition-shadow duration-300 hover:shadow-primary/50 overflow-hidden p-0",
+        "overflow-hidden border-0 p-0 shadow-sm dark:bg-zinc-900",
         className,
       )}
     >
@@ -75,7 +75,11 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
         {/* Technologies */}
         <div className="flex flex-wrap gap-2">
           {project.technologies.map((tech) => (
-            <Badge key={tech} variant="outline" className="bg-muted/30 text-xs">
+            <Badge
+              key={tech}
+              variant="outline"
+              className="bg-muted text-xs rounded-sm"
+            >
               {tech}
             </Badge>
           ))}
@@ -92,7 +96,7 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
               rel="noopener noreferrer"
             >
               <Github className="h-4 w-4" />
-              Github
+              Ver no Github
             </Link>
           </Button>
         )}
@@ -103,7 +107,7 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Demo
+              Mostrar ao vivo
               <ExternalLink className="h-4 w-4 ml-2" />
             </Link>
           </Button>

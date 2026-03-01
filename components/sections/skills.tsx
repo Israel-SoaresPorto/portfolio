@@ -108,9 +108,14 @@ export function Skills() {
       <div className="max-w-7xl mx-auto flex flex-col gap-20">
         {/* Hard Skills */}
         <div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-primary text-center mb-12">
-            Habilidades
-          </h2>
+          <div className="space-y-2 mb-12">
+            <p className="text-primary font-medium uppercase tracking-wide">
+              Stack
+            </p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-zinc-900 dark:text-zinc-100">
+              Habilidades
+            </h2>
+          </div>
           {/* Grid de categorias (hard skills) */}
           <div
             className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12"
@@ -121,10 +126,11 @@ export function Skills() {
                 key={category.title}
                 aria-labelledby={`category-${category.title}`}
                 role="article"
+                className="shadow-sm border-0 dark:bg-zinc-900"
               >
                 <h3
                   id={`category-${category.title}`}
-                  className="text-xl font-semibold text-primary px-6"
+                  className="text-xl font-semibold text-zinc-900 dark:text-zinc-100 px-6"
                 >
                   {category.title}
                 </h3>
@@ -153,17 +159,17 @@ export function Skills() {
 
         {/* Soft Skills */}
         <article className="space-y-4" aria-labelledby="soft-skills-title">
-          <h2
-            className="text-3xl sm:text-4xl font-bold text-primary mb-12 text-center"
+          <h3
+            className="text-xl sm:text-2xl font-bold text-zinc-900 dark:text-zinc-100 mb-12"
             id="soft-skills-title"
           >
             Soft Skills
-          </h2>
+          </h3>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
             {softSkills.map((skill) => (
               <Card
                 key={skill.name}
-                className="p-4 items-center text-center gap-2"
+                className="p-4 items-center text-center gap-2 shadow-sm border-0 dark:bg-zinc-900"
                 aria-label={skill.name}
               >
                 <div className="p-2 bg-primary/10 border rounded-lg">
