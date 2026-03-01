@@ -13,7 +13,7 @@ export function Contact() {
       className="bg-secondary/10 w-full py-20 px-6 sm:px-12 lg:px-24"
     >
       <div className="max-w-7xl mx-auto w-full flex flex-col items-center gap-8 text-center">
-        <h2 className="text-4xl font-bold text-primary">Vamos Conversar?</h2>
+        <h2 className="text-3xl sm:text-4xl font-bold text-primary">Vamos Conversar?</h2>
 
         <p className="text-lg text-zinc-600 dark:text-zinc-400 max-w-2xl">
           Estou sempre aberto a novas oportunidades e colaborações em projetos.

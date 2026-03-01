@@ -108,7 +108,7 @@ export function Skills() {
       <div className="max-w-7xl mx-auto flex flex-col gap-20">
         {/* Hard Skills */}
         <div>
-          <h2 className="text-3xl font-bold text-primary text-center mb-12">
+          <h2 className="text-3xl sm:text-4xl font-bold text-primary text-center mb-12">
             Habilidades
           </h2>
           {/* Grid de categorias (hard skills) */}
@@ -154,7 +154,7 @@ export function Skills() {
         {/* Soft Skills */}
         <article className="space-y-4" aria-labelledby="soft-skills-title">
           <h2
-            className="text-3xl font-bold text-primary mb-12 text-center"
+            className="text-3xl sm:text-4xl font-bold text-primary mb-12 text-center"
             id="soft-skills-title"
           >
             Minhas Softs Skills

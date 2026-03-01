@@ -73,7 +73,7 @@ export function Projects({ projects: allProjects }: ProjectsProps) {
         {/* Header */}
         <div className="flex flex-col gap-8 items-center">
           <div className="space-y-4">
-            <h2 className="text-3xl font-bold text-primary text-center">
+            <h2 className="text-3xl sm:text-4xl font-bold text-primary text-center">
               Projetos
             </h2>
             <p className="text-muted-foreground text-center">
