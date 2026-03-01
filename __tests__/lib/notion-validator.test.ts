@@ -247,7 +247,6 @@ describe("notion-validator", () => {
     it("deve validar categorias corretas", () => {
       expect(isValidCategory("fullstack")).toBe(true);
       expect(isValidCategory("infra")).toBe(true);
-      expect(isValidCategory("automation")).toBe(true);
     });
 
     it("deve rejeitar categorias inválidas", () => {
@@ -292,10 +291,6 @@ describe("notion-validator", () => {
       expect(mapCategory("Full Stack")).toBe("fullstack");
       expect(mapCategory("full stack")).toBe("fullstack");
       expect(mapCategory("fullstack")).toBe("fullstack");
-      
-      expect(mapCategory("Automação")).toBe("automation");
-      expect(mapCategory("automação")).toBe("automation");
-      expect(mapCategory("automation")).toBe("automation");
     });
 
     it("deve retornar null para categorias inválidas", () => {

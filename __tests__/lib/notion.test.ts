@@ -173,7 +173,7 @@ describe("notion integration", () => {
             Descrição: { type: "rich_text" as const, rich_text: [] as any },
             Destaque: { type: "checkbox" as const, checkbox: true },
             Thumbnail: { type: "files" as const, files: [] as any },
-            Categoria: { type: "select" as const, select: { name: "automation" } as any },
+            Categoria: { type: "select" as const, select: { name: "fullstack" } as any },
             Tecnologias: { type: "multi_select" as const, multi_select: [] as any },
             Detalhes: { type: "rich_text" as const, rich_text: [] as any },
             GitHub: { type: "url" as const, url: null },
@@ -190,7 +190,7 @@ describe("notion integration", () => {
       expect(projects[0].name).toBe("Projeto 1");
       expect(projects[0].category).toBe("infra");
       expect(projects[1].name).toBe("Projeto 2");
-      expect(projects[1].category).toBe("automation");
+      expect(projects[1].category).toBe("fullstack");
     });
 
     it("deve usar categoria padrão 'fullstack' quando categoria for inválida", async () => {

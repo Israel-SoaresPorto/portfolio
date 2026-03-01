@@ -9,7 +9,6 @@ const filterLabels: Record<ProjectFilter, string> = {
   highlight: "Destaques",
   fullstack: "Full Stack",
   infra: "Infraestrutura",
-  automation: "Automação",
 };
 
 export interface ProjectsProps {
@@ -40,7 +39,6 @@ function createProjectsReducer(allProjects: Project[]) {
         };
       case "fullstack":
       case "infra":
-      case "automation":
         return {
           ...state,
           activeTab: action.type,
@@ -90,14 +88,14 @@ export function Projects({ projects: allProjects }: ProjectsProps) {
             onValueChange={(value) =>
               dispatch({ type: value as ProjectFilter })
             }
-            className="bg-background/50 rounded-md p-1"
+            className="bg-transparent rounded-none w-full p-2 border-b border-muted-foreground/50"
           >
-            <TabsList className="bg-transparent justify-center data-[orientation='horizontal']:h-fit flex-wrap gap-2">
+            <TabsList className="bg-transparent mx-auto justify-center flex-wrap gap-2 data-[orientation='horizontal']:h-fit">
               {(Object.keys(filterLabels) as ProjectFilter[]).map((filter) => (
                 <TabsTrigger
                   key={filter}
                   value={filter}
-                  className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground dark:data-[state=active]:bg-primary dark:data-[state=active]:text-primary-foreground rounded-sm px-4 py-2 text-muted-foreground hover:text-primary dark:hover:text-primary transition-colors cursor-pointer"
+                  className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground dark:data-[state=active]:bg-primary dark:data-[state=active]:text-primary-foreground rounded-sm px-4 py-2 hover:bg-primary/10 dark:hover:bg-primary/20 text-muted-foreground hover:text-primary dark:hover:text-primary transition-colors cursor-pointer"
                 >
                   {filterLabels[filter]}
                 </TabsTrigger>

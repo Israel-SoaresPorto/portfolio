@@ -48,17 +48,6 @@ const mockProjects: Project[] = [
     githubUrl: "https://github.com/test/project3",
     image: "/test-image-3.jpg",
   },
-  {
-    id: "4",
-    name: "Projeto Automação",
-    description: "Projeto de automação",
-    category: "automation",
-    highlight: true,
-    technologies: ["Python", "GitHub Actions"],
-    highlights: ["Feature 4"],
-    githubUrl: "https://github.com/test/project4",
-    image: "/test-image-4.jpg",
-  },
 ];
 
 describe("Projects", () => {
@@ -86,7 +75,6 @@ describe("Projects", () => {
     expect(
       screen.getByRole("tab", { name: /infraestrutura/i }),
     ).toBeInTheDocument();
-    expect(screen.getByRole("tab", { name: /automação/i })).toBeInTheDocument();
   });
 
   it("deve iniciar com a aba 'Destaques' selecionada", () => {
@@ -136,23 +124,6 @@ describe("Projects", () => {
     expect(projectCards).toHaveLength(infraProjects.length);
   });
 
-  it("deve filtrar projetos ao clicar na aba 'Automação'", async () => {
-    const user = userEvent.setup();
-    render(<Projects projects={mockProjects} />);
-
-    const automationTab = screen.getByRole("tab", { name: /automação/i });
-    await user.click(automationTab);
-
-    expect(automationTab).toHaveAttribute("data-state", "active");
-
-    const automationProjects = mockProjects.filter(
-      (p) => p.category === "automation",
-    );
-    const projectCards = screen.getAllByTestId(/project-card-/);
-
-    expect(projectCards).toHaveLength(automationProjects.length);
-  });
-
   it("deve voltar a exibir destaques ao clicar novamente na aba 'Destaques'", async () => {
     const user = userEvent.setup();
     render(<Projects projects={mockProjects} />);
@@ -191,7 +162,7 @@ describe("Projects", () => {
     expect(grid).toHaveClass("grid");
     expect(grid).toHaveClass("grid-cols-1");
     expect(grid).toHaveClass("md:grid-cols-2");
-    expect(grid).toHaveClass("lg:grid-cols-3");
+    expect(grid).toHaveClass("xl:grid-cols-3");
   });
 
   it("deve ter o atributo id='projetos' para navegação por âncora", () => {

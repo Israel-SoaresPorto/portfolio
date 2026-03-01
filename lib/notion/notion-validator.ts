@@ -160,7 +160,7 @@ export function isValidUrl(url: string): boolean {
  * Valida se uma categoria é válida
  */
 export function isValidCategory(category: string): category is ProjectCategory {
-  return ["fullstack", "infra", "automation"].includes(category);
+  return ["fullstack", "infra"].includes(category);
 }
 
 /**
@@ -174,9 +174,6 @@ export function mapCategory(categoryLabel: string): ProjectCategory | null {
     infra: "infra",
     Infraestrutura: "infra",
     infraestrutura: "infra",
-    automation: "automation",
-    Automação: "automation",
-    automação: "automation",
   };
 
   return categoryMap[categoryLabel] || null;
