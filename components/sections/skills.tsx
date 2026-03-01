@@ -113,28 +113,27 @@ export function Skills() {
           </h2>
           {/* Grid de categorias (hard skills) */}
           <div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-16 gap-y-12"
+            className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12"
             aria-label="Categorias de Hard Skills"
           >
             {skillCategories.map((category) => (
-              <article
+              <Card
                 key={category.title}
-                className="space-y-4"
                 aria-labelledby={`category-${category.title}`}
+                role="article"
               >
                 <h3
                   id={`category-${category.title}`}
-                  className="text-xl font-semibold text-primary"
+                  className="text-xl font-semibold text-primary px-6"
                 >
                   {category.title}
                 </h3>
-                <div className="flex flex-wrap gap-3">
+                <CardContent className="flex flex-wrap gap-3">
                   {category.skills.map((skill) => (
                     <Badge
                       aria-label={skill.name}
-                      variant="outline"
                       key={skill.name}
-                      className="px-4 py-2 border-primary text-zinc-700 dark:text-zinc-300 bg-background/20 text-sm font-medium flex items-center gap-2 shadow-xs hover:shadow-xs transition-shadow duration-300 hover:shadow-primary/50"
+                      className="text-zinc-700 dark:text-zinc-300 bg-primary/10 text-sm flex items-center gap-2 rounded-sm"
                     >
                       {skill.icon && (
                         <skill.icon
@@ -146,8 +145,8 @@ export function Skills() {
                       {skill.name}
                     </Badge>
                   ))}
-                </div>
-              </article>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
@@ -160,15 +159,14 @@ export function Skills() {
           >
             Minhas Softs Skills
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
             {softSkills.map((skill) => (
               <Card
                 key={skill.name}
-                className="p-4 bg-background/20 backdrop-blur-lg 
-                hover:shadow-sm transition-shadow duration-300 hover:shadow-primary/50 flex-row items-center group"
+                className="p-4 items-center text-center gap-2"
                 aria-label={skill.name}
               >
-                <div className="p-3 bg-primary/5 border rounded-lg group-hover:bg-primary/10 group-hover:border-primary/20 transition-colors duration-300">
+                <div className="p-2 bg-primary/10 border rounded-lg">
                   {skill.icon && (
                     <skill.icon
                       className="size-6 text-primary"
@@ -177,7 +175,7 @@ export function Skills() {
                     />
                   )}
                 </div>
-                <CardContent className="p-0 font-semibold text-zinc-700 dark:text-zinc-300">
+                <CardContent className="p-0 text-zinc-700 dark:text-zinc-300">
                   {skill.name}
                 </CardContent>
               </Card>

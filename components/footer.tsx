@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -12,38 +10,9 @@ export function Footer() {
             reservados.
           </p>
 
-          <div className="flex flex-wrap justify-center gap-6">
-            <Link
-              href="#home"
-              className="text-sm text-zinc-600 dark:text-zinc-400 hover:text-primary dark:hover:text-zinc-100 transition-colors"
-            >
-              Início
-            </Link>
-            <Link
-              href="#sobre"
-              className="text-sm text-zinc-600 dark:text-zinc-400 hover:text-primary dark:hover:text-zinc-100 transition-colors"
-            >
-              Sobre
-            </Link>
-            <Link
-              href="#habilidades"
-              className="text-sm text-zinc-600 dark:text-zinc-400 hover:text-primary dark:hover:text-zinc-100 transition-colors"
-            >
-              Habilidades
-            </Link>
-            <Link
-              href="#projetos"
-              className="text-sm text-zinc-600 dark:text-zinc-400 hover:text-primary dark:hover:text-zinc-100 transition-colors"
-            >
-              Projetos
-            </Link>
-            <Link
-              href="#contato"
-              className="text-sm text-zinc-600 dark:text-zinc-400 hover:text-primary dark:hover:text-zinc-100 transition-colors"
-            >
-              Contato
-            </Link>
-          </div>
+          <p className="text-sm text-zinc-600 dark:text-zinc-400 text-center sm:text-right">
+            Feito com dedicação e muito código.
+          </p>
         </div>
       </div>
     </footer>

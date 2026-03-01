@@ -21,19 +21,6 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const { setTheme, theme } = useTheme();
-  const [isDesktop, setIsDesktop] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsDesktop(window.innerWidth >= 1024);
-    };
-
-    handleResize(); // Verificar no carregamento inicial
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -49,24 +36,21 @@ export function Header() {
   return (
     <header
       className={cn("fixed top-0 left-0 right-0 z-50", [
-        isMenuOpen && !isDesktop ? "bg-background" : "",
+        isMenuOpen ? "bg-background" : "",
       ])}
     >
       <div
         className={cn(
-          "w-[95%] flex h-16 items-center justify-between px-4 md:px-6 mx-auto",
+          "flex h-16 items-center justify-between px-4 md:px-6 mx-auto",
           isScrolled
-            ? "bg-background/70 shadow-md backdrop-blur-md rounded-b-2xl"
+            ? "bg-background/90 shadow-md backdrop-blur-md"
             : "backdrop-blur-sm",
-          isMenuOpen && !isDesktop
-            ? "bg-background rounded-none shadow-none"
-            : "",
         )}
       >
         {/* Logo */}
         <Link
           href="#home"
-          className="text-xl font-semibold text-zinc-900 transition-colors hover:text-zinc-600 dark:text-zinc-50 dark:hover:text-zinc-300"
+          className="text-xl font-semibold text-zinc-900 transition-colors hover:text-primary dark:text-zinc-50 dark:hover:text-primary"
         >
           Israel Soares
         </Link>
@@ -77,7 +61,7 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-sm font-medium transition-colors hover:text-primary"
+              className="text-sm font-medium transition-colors hover:text-primary focus:outline-none"
             >
               {item.label}
             </Link>

@@ -1,5 +1,27 @@
+import { BookOpen, Search, TrendingUp } from "lucide-react";
 import { Card, CardContent, CardDescription, CardTitle } from "../ui/card";
 import Image from "next/image";
+
+const qualities = [
+  {
+    name: "Aprendizado Contínuo",
+    icon: BookOpen,
+    description:
+      "Encaro cada nova tecnologia como um desafio a ser vencido. Tenho uma vontade genuína de aprender novas habilidades, adaptando-me rapidamente às mudanças do mercado técnico.",
+  },
+  {
+    name: "Resolução de Problemas",
+    icon: Search,
+    description:
+      'Minha abordagem não é apenas "fazer funcionar", mas entender o porquê. Analiso problemas com rigor crítico para encontrar soluções sustentáveis e eficientes, focando na causa raiz.',
+  },
+  {
+    name: "Melhoria Contínua",
+    icon: TrendingUp,
+    description:
+      "Busco diariamente aprimorar não apenas minhas competências técnicas em código e nuvem, mas também minhas habilidades comportamentais, como protagonismo e comunicação clara.",
+  },
+];
 
 export function About() {
   return (
@@ -9,7 +31,7 @@ export function About() {
     >
       <div className="max-w-7xl mx-auto flex flex-col gap-12">
         {/* Título principal */}
-        <h2 className="text-3xl font-bold text-primary text-center">
+        <h2 className="text-3xl sm:text-4xl font-bold text-primary text-center">
           Sobre Mim
         </h2>
         {/* Container principal com foto e introdução */}
@@ -27,9 +49,7 @@ export function About() {
             <p className="text-base leading-relaxed text-zinc-700 dark:text-zinc-300">
               Sou estudande de Sistemas de Informação (5° semestre). Minha base
               sólida reside no Desenvolvimento Full-Stack, trabalhando com
-              tecnologias como TypeScript, React, Nest.JS, e Postgresql. Também
-              venho dedicando tempo para aprender sobre automações,
-              especialmente utilizando n8n para uso pessoal.
+              tecnologias como TypeScript, React, Nest.JS, e Postgresql.
             </p>
             <p className="text-base leading-relaxed text-zinc-700 dark:text-zinc-300">
               Hoje vivo um momento minha transição estratégica para a cultura
@@ -48,55 +68,23 @@ export function About() {
         </div>
         {/* Grid de características */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Aprendizado Contínuo */}
-          <Card
-            role="article"
-            className="bg-background/30 backdrop-blur-lg hover:shadow-sm transition-shadow duration-300 hover:shadow-primary/50"
-          >
-            <CardContent>
-              <CardTitle className="text-xl text-primary mb-4">
-                <h3>Aprendizado Contínuo</h3>
-              </CardTitle>
-              <CardDescription>
-                Encaro cada nova tecnologia como um desafio a ser vencido. Tenho
-                uma vontade genuína de aprender novas habilidades, adaptando-me
-                rapidamente às mudanças do mercado técnico.
-              </CardDescription>
-            </CardContent>
-          </Card>
-          {/* Resolução de Problemas */}
-          <Card
-            role="article"
-            className="bg-background/30 backdrop-blur-lg hover:shadow-sm transition-shadow duration-300 hover:shadow-primary/50"
-          >
-            <CardContent>
-              <CardTitle className="text-xl text-primary mb-4">
-                <h3>Resolução de Problemas</h3>
-              </CardTitle>
-              <CardDescription>
-                Minha abordagem não é apenas &quot;fazer funcionar&quot;, mas
-                entender o porquê. Analiso problemas com rigor crítico para
-                encontrar soluções sustentáveis e eficientes, focando na causa
-                raiz.
-              </CardDescription>
-            </CardContent>
-          </Card>
-          {/* Melhoria Contínua */}
-          <Card
-            role="article"
-            className="bg-background/30 backdrop-blur-lg hover:shadow-sm transition-shadow duration-300 hover:shadow-primary/50"
-          >
-            <CardContent>
-              <CardTitle className="text-xl text-primary mb-4">
-                <h3>Melhoria Contínua</h3>
-              </CardTitle>
-              <CardDescription>
-                Busco diariamente aprimorar não apenas minhas competências
-                técnicas em código e nuvem, mas também minhas habilidades
-                comportamentais, como protagonismo e comunicação clara.
-              </CardDescription>
-            </CardContent>
-          </Card>
+          {qualities.map((quality, index) => (
+            <Card
+              key={index}
+              role="article"
+              className="hover:shadow-sm transition-shadow duration-300 hover:shadow-primary/50"
+            >
+              <CardContent>
+                <div className="inline-block bg-primary/10 dark:bg-primary/20 p-2 rounded-md mb-2">
+                  <quality.icon className="size-6 text-primary" />
+                </div>
+                <CardTitle className="text-xl text-primary mb-4">
+                  <h3>{quality.name}</h3>
+                </CardTitle>
+                <CardDescription>{quality.description}</CardDescription>
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </div>
     </section>

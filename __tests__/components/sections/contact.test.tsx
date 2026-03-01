@@ -20,7 +20,10 @@ describe("Contact", () => {
     render(<Contact />);
     const emailButton = screen.getByRole("link", { name: /E-mail/i });
     expect(emailButton).toBeInTheDocument();
-    expect(emailButton).toHaveAttribute("href", "mailto:seu-email@example.com");
+    expect(emailButton).toHaveAttribute(
+      "href",
+      "mailto:soaresportoisrael@gmail.com",
+    );
   });
 
   it("deve renderizar o botão do Linkedin", () => {

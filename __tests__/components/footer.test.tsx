@@ -22,45 +22,9 @@ describe("Footer", () => {
     expect(copyright).toBeInTheDocument();
   });
   
-  it("deve renderizar todos os 5 links de navegação", () => {
+  it("deve ter o texto 'Feito com dedicação e muito código'", () => {
     render(<Footer />);
-    const links = screen.getAllByRole("link");
-    expect(links).toHaveLength(5);
+    const dedicationText = screen.getByText(/Feito com dedicação e muito código/i);
+    expect(dedicationText).toBeInTheDocument();
   });
-  
-  it("deve renderizar o link de Início", () => {
-    render(<Footer />);
-    const homeLink = screen.getByRole("link", { name: /Início/i });
-    expect(homeLink).toBeInTheDocument();
-    expect(homeLink).toHaveAttribute("href", "#home");
-  });
-
-  it("deve renderizar o link de Sobre", () => {
-    render(<Footer />);
-    const aboutLink = screen.getByRole("link", { name: /Sobre/i });
-    expect(aboutLink).toBeInTheDocument();
-    expect(aboutLink).toHaveAttribute("href", "#sobre");
-  });
-
-  it("deve renderizar o link de Habilidades", () => {
-    render(<Footer />);
-    const skillsLink = screen.getByRole("link", { name: /Habilidades/i });
-    expect(skillsLink).toBeInTheDocument();
-    expect(skillsLink).toHaveAttribute("href", "#habilidades");
-  });
-
-  it("deve renderizar o link de Projetos", () => {
-    render(<Footer />);
-    const projectsLink = screen.getByRole("link", { name: /Projetos/i });
-    expect(projectsLink).toBeInTheDocument();
-    expect(projectsLink).toHaveAttribute("href", "#projetos");
-  });
-
-  it("deve renderizar o link de Contato", () => {
-    render(<Footer />);
-    const contactLink = screen.getByRole("link", { name: /Contato/i });
-    expect(contactLink).toBeInTheDocument();
-    expect(contactLink).toHaveAttribute("href", "#contato");
-  });
-
 });

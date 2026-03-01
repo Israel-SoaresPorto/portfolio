@@ -11,23 +11,23 @@ export function Hero() {
       id="home"
     >
       <div className="max-w-7xl gap-8 flex flex-col justify-center items-center">
-        <Badge className="font-medium">Disponivel para oportunidades</Badge>
+        <Badge className="font-medium sm:text-sm">Disponivel para oportunidades</Badge>
         {/* Textos e Botões */}
         <div className="flex flex-col gap-6 text-center">
           <p className="text-lg text-zinc-700 dark:text-zinc-300">
             Olá, eu sou
           </p>
-          <h1 className="text-4xl font-bold text-primary">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-primary">
             Israel Soares Porto
           </h1>
 
-          <p className="text-lg font-medium text-zinc-700 dark:text-zinc-300">
+          <p className="text-base sm:text-lg font-medium text-zinc-700 dark:text-zinc-300">
             Desenvolvedor Full-Stack, focado em criar sistemas escaláveis, e
             eficientes.
           </p>
 
           {/* CTAs */}
-          <div className="flex flex-col gap-4 xs:flex-row xs:gap-6 justify-center">
+          <div className="flex gap-4 xs:gap-6 justify-center">
             <Button
               size="lg"
               onClick={() => {
