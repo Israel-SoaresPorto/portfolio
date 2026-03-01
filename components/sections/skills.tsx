@@ -95,7 +95,7 @@ export function Skills() {
     { name: "Trabalho em Equipe", icon: UsersRound },
     { name: "Resolução de Problemas", icon: Puzzle },
     { name: "Organização", icon: ClipboardList },
-    { name: "Atenção no Detalhes", icon: Glasses },
+    { name: "Atenção aos Detalhes", icon: Glasses },
     { name: "Pensamento Crítico", icon: Brain },
     { name: "Aprendizado Contínuo", icon: GraduationCap },
   ];

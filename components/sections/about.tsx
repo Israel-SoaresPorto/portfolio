@@ -47,22 +47,13 @@ export function About() {
           {/* Parágrafo introdutório */}
           <div className="space-y-1">
             <p className="text-base leading-relaxed text-zinc-700 dark:text-zinc-300">
-              Sou estudante de Sistemas de Informação (5° semestre). Minha base
-              sólida reside no Desenvolvimento Full-Stack, trabalhando com
-              tecnologias como TypeScript, React, Nest.JS, e Postgresql.
+              Sou estudante do 5º semestre de Sistemas de Informação com forte base em Desenvolvimento Full-Stack, construindo aplicações robustas com TypeScript, React, Nest.js e PostgreSQL.
             </p>
             <p className="text-base leading-relaxed text-zinc-700 dark:text-zinc-300">
-              Hoje vivo um momento minha transição estratégica para a cultura
-              DevOps. Atualmente, dedico minha energia ao domínio de
-              arquiteturas AWS, buscando unir a agilidade do desenvolvimento com
-              a resiliência da infraestrutura moderna. Minha jornada é guiada
-              por uma paixão por aprender e evoluir constantemente, buscando não
-              apenas acompanhar as tendências, mas também antecipá-las.
+              Atualmente, estou focado em minha transição para a área de Cloud e DevOps. Dedico meus estudos diários ao domínio de ambientes Linux e arquiteturas AWS. Meu principal objetivo é unir a agilidade da criação de software com a resiliência, automação e escalabilidade da infraestrutura moderna.
             </p>
             <p className="text-base leading-relaxed text-zinc-700 dark:text-zinc-300">
-              Acredito que a combinação de habilidades técnicas e uma
-              mentalidade de melhoria contínua é a chave para criar soluções
-              inovadoras e impactantes.
+              Mais do que acompanhar tendências, busco entender o &quot;porquê&quot; por trás de cada ferramenta, aplicando uma mentalidade de melhoria contínua para desenvolver sistemas que realmente façam a diferença.
             </p>
           </div>
         </div>
