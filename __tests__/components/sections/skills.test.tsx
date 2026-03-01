@@ -11,7 +11,7 @@ describe("Skills", () => {
   it("deve renderizar o título de soft skills", () => {
     render(<Skills />);
     const softSkillsTitle = screen.getByRole("heading", {
-      name: /Minhas Softs Skills/i,
+      name: /Soft Skills/i,
     });
     expect(softSkillsTitle).toBeInTheDocument();
   });
@@ -105,7 +105,7 @@ describe("Skills", () => {
     it("deve renderizar a seção de soft skills", () => {
       render(<Skills />);
       const section = screen.getByRole("article", {
-        name: /Minhas Softs Skills/i,
+        name: /Soft Skills/i,
       });
       expect(section).toBeInTheDocument();
     });
@@ -113,7 +113,7 @@ describe("Skills", () => {
     it("deve renderizar os cards de soft skills", () => {
       render(<Skills />);
 
-      const softSkillsSection = screen.getByLabelText(/Minhas Softs Skills/i);
+      const softSkillsSection = screen.getByLabelText(/Soft Skills/i);
 
       const softSkillsCards = within(softSkillsSection).getAllByLabelText(/.*/i, {
         selector: "[data-slot='card']",

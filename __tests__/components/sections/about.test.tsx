@@ -10,7 +10,7 @@ describe("About", () => {
 
   it("deve renderizar a texto de 'Sobre Mim'", () => {
     render(<About />);
-    const description = screen.getByText(/Sou estudande de Sistemas de Informação/i);
+    const description = screen.getByText(/Sou estudante de Sistemas de Informação/i);
     expect(description).toBeInTheDocument();
   });
 

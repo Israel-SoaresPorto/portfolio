@@ -11,7 +11,9 @@ export function Hero() {
       id="home"
     >
       <div className="max-w-7xl gap-8 flex flex-col justify-center items-center">
-        <Badge className="font-medium sm:text-sm">Disponivel para oportunidades</Badge>
+        <Badge className="font-medium sm:text-sm">
+          Disponivel para oportunidades
+        </Badge>
         {/* Textos e Botões */}
         <div className="flex flex-col gap-6 text-center">
           <p className="text-lg text-zinc-700 dark:text-zinc-300">
@@ -22,8 +24,7 @@ export function Hero() {
           </h1>
 
           <p className="text-base sm:text-lg font-medium text-zinc-700 dark:text-zinc-300">
-            Desenvolvedor Full-Stack, focado em criar sistemas escaláveis, e
-            eficientes.
+            Desenvolvedor Full-Stack | Foco em Cloud & DevOps
           </p>
 
           {/* CTAs */}

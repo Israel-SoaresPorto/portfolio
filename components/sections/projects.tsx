@@ -78,7 +78,7 @@ export function Projects({ projects: allProjects }: ProjectsProps) {
             </h2>
             <p className="text-muted-foreground text-center">
               Uma seleção de soluções que desenvolvi unindo infraestrutura em
-              nuvem, desenvolvimento de aplicações e automação inteligente.
+              nuvem e desenvolvimento de aplicações.
             </p>
           </div>
 

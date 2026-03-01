@@ -157,7 +157,7 @@ export function Skills() {
             className="text-3xl sm:text-4xl font-bold text-primary mb-12 text-center"
             id="soft-skills-title"
           >
-            Minhas Softs Skills
+            Soft Skills
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
             {softSkills.map((skill) => (
